@@ -11,7 +11,7 @@ MAX_LEN = 200
 # ── Load model & tokenizer (cached so they load only once) ──────────────────
 @st.cache_resource
 def load_artifacts():
-    model = load_model("sentiment_model.h5")
+    model = load_model("sentiment_model.keras")
     with open("tokenizer.pkl", "rb") as f:
         tokenizer = pickle.load(f)
     return model, tokenizer
